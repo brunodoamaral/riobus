@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  MapViewController.h
 //  riobus
 //
 //  Created by Bruno do Amaral on 04/07/2014.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface MapViewController : UIViewController
 
 @end

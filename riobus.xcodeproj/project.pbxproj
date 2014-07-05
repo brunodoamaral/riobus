@@ -14,13 +14,34 @@
 		681A7F51196722530006C335 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 681A7F50196722530006C335 /* main.m */; };
 		681A7F55196722540006C335 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 681A7F54196722540006C335 /* AppDelegate.m */; };
 		681A7F58196722540006C335 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 681A7F56196722540006C335 /* Main.storyboard */; };
-		681A7F5B196722540006C335 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 681A7F5A196722540006C335 /* ViewController.m */; };
 		681A7F5D196722540006C335 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 681A7F5C196722540006C335 /* Images.xcassets */; };
 		681A7F64196722540006C335 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 681A7F63196722540006C335 /* XCTest.framework */; };
 		681A7F65196722540006C335 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 681A7F44196722530006C335 /* Foundation.framework */; };
 		681A7F66196722540006C335 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 681A7F48196722530006C335 /* UIKit.framework */; };
 		681A7F6E196722540006C335 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 681A7F6C196722540006C335 /* InfoPlist.strings */; };
 		681A7F70196722540006C335 /* riobusTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 681A7F6F196722540006C335 /* riobusTests.m */; };
+		681A7F7C196727C60006C335 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 681A7F7B196727C60006C335 /* MapViewController.m */; };
+		681A7F7E19672ACF0006C335 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 681A7F7D19672ACF0006C335 /* CoreLocation.framework */; };
+		681A7F8D196731410006C335 /* bus-green.png in Resources */ = {isa = PBXBuildFile; fileRef = 681A7F81196731410006C335 /* bus-green.png */; };
+		681A7F8E196731410006C335 /* bus-green@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 681A7F82196731410006C335 /* bus-green@2x.png */; };
+		681A7F8F196731410006C335 /* bus-icon-256.png in Resources */ = {isa = PBXBuildFile; fileRef = 681A7F83196731410006C335 /* bus-icon-256.png */; };
+		681A7F90196731410006C335 /* bus-red.png in Resources */ = {isa = PBXBuildFile; fileRef = 681A7F84196731410006C335 /* bus-red.png */; };
+		681A7F91196731410006C335 /* bus-red@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 681A7F85196731410006C335 /* bus-red@2x.png */; };
+		681A7F92196731410006C335 /* bus-yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 681A7F86196731410006C335 /* bus-yellow.png */; };
+		681A7F93196731410006C335 /* bus-yellow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 681A7F87196731410006C335 /* bus-yellow@2x.png */; };
+		681A7F94196731410006C335 /* fundo.png in Resources */ = {isa = PBXBuildFile; fileRef = 681A7F88196731410006C335 /* fundo.png */; };
+		681A7F95196731410006C335 /* fundo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 681A7F89196731410006C335 /* fundo@2x.png */; };
+		681A7F96196731410006C335 /* icon120@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 681A7F8A196731410006C335 /* icon120@2x.png */; };
+		681A7F97196731410006C335 /* Rio@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 681A7F8B196731410006C335 /* Rio@2x.png */; };
+		681A7F98196731410006C335 /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = 681A7F8C196731410006C335 /* search.png */; };
+		681A7F9E196824890006C335 /* BusData.m in Sources */ = {isa = PBXBuildFile; fileRef = 681A7F9D196824890006C335 /* BusData.m */; };
+		681A7FA1196824FC0006C335 /* BusDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 681A7FA0196824FC0006C335 /* BusDataStore.m */; };
+		681A7FA4196847830006C335 /* icon-bus-toolbar in Resources */ = {isa = PBXBuildFile; fileRef = 681A7FA2196847830006C335 /* icon-bus-toolbar */; };
+		681A7FA5196847830006C335 /* icon-bus-toolbar@2x in Resources */ = {isa = PBXBuildFile; fileRef = 681A7FA3196847830006C335 /* icon-bus-toolbar@2x */; };
+		681A7FA819684A6C0006C335 /* OptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 681A7FA719684A6C0006C335 /* OptionsViewController.m */; };
+		681A7FAB19684DC70006C335 /* facebook in Resources */ = {isa = PBXBuildFile; fileRef = 681A7FA919684DC70006C335 /* facebook */; };
+		681A7FAC19684DC70006C335 /* facebook@2x in Resources */ = {isa = PBXBuildFile; fileRef = 681A7FAA19684DC70006C335 /* facebook@2x */; };
+		F37CD79044D44A93BB494B9A /* libPods-riobus.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D9CA8F077F246CFBA653042 /* libPods-riobus.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,14 +66,40 @@
 		681A7F53196722540006C335 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		681A7F54196722540006C335 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		681A7F57196722540006C335 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		681A7F59196722540006C335 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		681A7F5A196722540006C335 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		681A7F5C196722540006C335 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		681A7F62196722540006C335 /* riobusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = riobusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		681A7F63196722540006C335 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		681A7F6B196722540006C335 /* riobusTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "riobusTests-Info.plist"; sourceTree = "<group>"; };
 		681A7F6D196722540006C335 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		681A7F6F196722540006C335 /* riobusTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = riobusTests.m; sourceTree = "<group>"; };
+		681A7F79196725C40006C335 /* SDKDemoAPIKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDKDemoAPIKey.h; sourceTree = "<group>"; };
+		681A7F7A196727C60006C335 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		681A7F7B196727C60006C335 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		681A7F7D19672ACF0006C335 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		681A7F81196731410006C335 /* bus-green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bus-green.png"; sourceTree = "<group>"; };
+		681A7F82196731410006C335 /* bus-green@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bus-green@2x.png"; sourceTree = "<group>"; };
+		681A7F83196731410006C335 /* bus-icon-256.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bus-icon-256.png"; sourceTree = "<group>"; };
+		681A7F84196731410006C335 /* bus-red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bus-red.png"; sourceTree = "<group>"; };
+		681A7F85196731410006C335 /* bus-red@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bus-red@2x.png"; sourceTree = "<group>"; };
+		681A7F86196731410006C335 /* bus-yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bus-yellow.png"; sourceTree = "<group>"; };
+		681A7F87196731410006C335 /* bus-yellow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bus-yellow@2x.png"; sourceTree = "<group>"; };
+		681A7F88196731410006C335 /* fundo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fundo.png; sourceTree = "<group>"; };
+		681A7F89196731410006C335 /* fundo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fundo@2x.png"; sourceTree = "<group>"; };
+		681A7F8A196731410006C335 /* icon120@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon120@2x.png"; sourceTree = "<group>"; };
+		681A7F8B196731410006C335 /* Rio@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Rio@2x.png"; sourceTree = "<group>"; };
+		681A7F8C196731410006C335 /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search.png; sourceTree = "<group>"; };
+		681A7F9C196824890006C335 /* BusData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusData.h; sourceTree = "<group>"; };
+		681A7F9D196824890006C335 /* BusData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusData.m; sourceTree = "<group>"; };
+		681A7F9F196824FC0006C335 /* BusDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusDataStore.h; sourceTree = "<group>"; };
+		681A7FA0196824FC0006C335 /* BusDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusDataStore.m; sourceTree = "<group>"; };
+		681A7FA2196847830006C335 /* icon-bus-toolbar */ = {isa = PBXFileReference; lastKnownFileType = file; path = "icon-bus-toolbar"; sourceTree = "<group>"; };
+		681A7FA3196847830006C335 /* icon-bus-toolbar@2x */ = {isa = PBXFileReference; lastKnownFileType = file; path = "icon-bus-toolbar@2x"; sourceTree = "<group>"; };
+		681A7FA619684A6C0006C335 /* OptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionsViewController.h; sourceTree = "<group>"; };
+		681A7FA719684A6C0006C335 /* OptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionsViewController.m; sourceTree = "<group>"; };
+		681A7FA919684DC70006C335 /* facebook */ = {isa = PBXFileReference; lastKnownFileType = file; path = facebook; sourceTree = "<group>"; };
+		681A7FAA19684DC70006C335 /* facebook@2x */ = {isa = PBXFileReference; lastKnownFileType = file; path = "facebook@2x"; sourceTree = "<group>"; };
+		8D9CA8F077F246CFBA653042 /* libPods-riobus.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-riobus.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		93573705E7B34D13ADE5C58F /* Pods-riobus.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-riobus.xcconfig"; path = "Pods/Pods-riobus.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +107,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				681A7F7E19672ACF0006C335 /* CoreLocation.framework in Frameworks */,
 				681A7F47196722530006C335 /* CoreGraphics.framework in Frameworks */,
 				681A7F49196722530006C335 /* UIKit.framework in Frameworks */,
 				681A7F45196722530006C335 /* Foundation.framework in Frameworks */,
+				F37CD79044D44A93BB494B9A /* libPods-riobus.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +135,7 @@
 				681A7F69196722540006C335 /* riobusTests */,
 				681A7F43196722530006C335 /* Frameworks */,
 				681A7F42196722530006C335 /* Products */,
+				93573705E7B34D13ADE5C58F /* Pods-riobus.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,10 +151,12 @@
 		681A7F43196722530006C335 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				681A7F7D19672ACF0006C335 /* CoreLocation.framework */,
 				681A7F44196722530006C335 /* Foundation.framework */,
 				681A7F46196722530006C335 /* CoreGraphics.framework */,
 				681A7F48196722530006C335 /* UIKit.framework */,
 				681A7F63196722540006C335 /* XCTest.framework */,
+				8D9CA8F077F246CFBA653042 /* libPods-riobus.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -112,13 +164,18 @@
 		681A7F4A196722530006C335 /* riobus */ = {
 			isa = PBXGroup;
 			children = (
+				681A7F9B196824560006C335 /* Model */,
+				681A7F80196731410006C335 /* imagens */,
+				681A7F79196725C40006C335 /* SDKDemoAPIKey.h */,
 				681A7F53196722540006C335 /* AppDelegate.h */,
 				681A7F54196722540006C335 /* AppDelegate.m */,
 				681A7F56196722540006C335 /* Main.storyboard */,
-				681A7F59196722540006C335 /* ViewController.h */,
-				681A7F5A196722540006C335 /* ViewController.m */,
 				681A7F5C196722540006C335 /* Images.xcassets */,
 				681A7F4B196722530006C335 /* Supporting Files */,
+				681A7F7A196727C60006C335 /* MapViewController.h */,
+				681A7F7B196727C60006C335 /* MapViewController.m */,
+				681A7FA619684A6C0006C335 /* OptionsViewController.h */,
+				681A7FA719684A6C0006C335 /* OptionsViewController.m */,
 			);
 			path = riobus;
 			sourceTree = "<group>";
@@ -152,6 +209,40 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		681A7F80196731410006C335 /* imagens */ = {
+			isa = PBXGroup;
+			children = (
+				681A7FA919684DC70006C335 /* facebook */,
+				681A7FAA19684DC70006C335 /* facebook@2x */,
+				681A7FA2196847830006C335 /* icon-bus-toolbar */,
+				681A7FA3196847830006C335 /* icon-bus-toolbar@2x */,
+				681A7F81196731410006C335 /* bus-green.png */,
+				681A7F82196731410006C335 /* bus-green@2x.png */,
+				681A7F83196731410006C335 /* bus-icon-256.png */,
+				681A7F84196731410006C335 /* bus-red.png */,
+				681A7F85196731410006C335 /* bus-red@2x.png */,
+				681A7F86196731410006C335 /* bus-yellow.png */,
+				681A7F87196731410006C335 /* bus-yellow@2x.png */,
+				681A7F88196731410006C335 /* fundo.png */,
+				681A7F89196731410006C335 /* fundo@2x.png */,
+				681A7F8A196731410006C335 /* icon120@2x.png */,
+				681A7F8B196731410006C335 /* Rio@2x.png */,
+				681A7F8C196731410006C335 /* search.png */,
+			);
+			path = imagens;
+			sourceTree = "<group>";
+		};
+		681A7F9B196824560006C335 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				681A7F9C196824890006C335 /* BusData.h */,
+				681A7F9D196824890006C335 /* BusData.m */,
+				681A7F9F196824FC0006C335 /* BusDataStore.h */,
+				681A7FA0196824FC0006C335 /* BusDataStore.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -159,9 +250,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 681A7F73196722540006C335 /* Build configuration list for PBXNativeTarget "riobus" */;
 			buildPhases = (
+				131570F6245A48478D85C306 /* Check Pods Manifest.lock */,
 				681A7F3D196722530006C335 /* Sources */,
 				681A7F3E196722530006C335 /* Frameworks */,
 				681A7F3F196722530006C335 /* Resources */,
+				F53865278DE24F58A1EE981B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -228,9 +321,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				681A7FA4196847830006C335 /* icon-bus-toolbar in Resources */,
+				681A7F8D196731410006C335 /* bus-green.png in Resources */,
+				681A7F97196731410006C335 /* Rio@2x.png in Resources */,
+				681A7FAC19684DC70006C335 /* facebook@2x in Resources */,
 				681A7F5D196722540006C335 /* Images.xcassets in Resources */,
+				681A7FAB19684DC70006C335 /* facebook in Resources */,
+				681A7F90196731410006C335 /* bus-red.png in Resources */,
+				681A7F94196731410006C335 /* fundo.png in Resources */,
 				681A7F4F196722530006C335 /* InfoPlist.strings in Resources */,
+				681A7F95196731410006C335 /* fundo@2x.png in Resources */,
+				681A7F92196731410006C335 /* bus-yellow.png in Resources */,
+				681A7F8F196731410006C335 /* bus-icon-256.png in Resources */,
+				681A7F96196731410006C335 /* icon120@2x.png in Resources */,
+				681A7F98196731410006C335 /* search.png in Resources */,
+				681A7F91196731410006C335 /* bus-red@2x.png in Resources */,
+				681A7F8E196731410006C335 /* bus-green@2x.png in Resources */,
+				681A7FA5196847830006C335 /* icon-bus-toolbar@2x in Resources */,
 				681A7F58196722540006C335 /* Main.storyboard in Resources */,
+				681A7F93196731410006C335 /* bus-yellow@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,14 +353,50 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		131570F6245A48478D85C306 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F53865278DE24F58A1EE981B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-riobus-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		681A7F3D196722530006C335 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				681A7F5B196722540006C335 /* ViewController.m in Sources */,
+				681A7F9E196824890006C335 /* BusData.m in Sources */,
+				681A7F7C196727C60006C335 /* MapViewController.m in Sources */,
 				681A7F55196722540006C335 /* AppDelegate.m in Sources */,
 				681A7F51196722530006C335 /* main.m in Sources */,
+				681A7FA1196824FC0006C335 /* BusDataStore.m in Sources */,
+				681A7FA819684A6C0006C335 /* OptionsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,6 +518,7 @@
 		};
 		681A7F74196722540006C335 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93573705E7B34D13ADE5C58F /* Pods-riobus.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -386,6 +532,7 @@
 		};
 		681A7F75196722540006C335 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93573705E7B34D13ADE5C58F /* Pods-riobus.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -456,6 +603,7 @@
 				681A7F75196722540006C335 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		681A7F76196722540006C335 /* Build configuration list for PBXNativeTarget "riobusTests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +612,7 @@
 				681A7F78196722540006C335 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
