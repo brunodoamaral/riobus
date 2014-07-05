@@ -12,8 +12,9 @@
 #import <AFNetworking/AFNetworking.h>
 #import "BusDataStore.h"
 #import <Toast/Toast+UIView.h>
+#import "OptionsViewController.h"
 
-@interface MapViewController () <CLLocationManagerDelegate, GMSMapViewDelegate>
+@interface MapViewController () <CLLocationManagerDelegate, GMSMapViewDelegate, OptionsViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet GMSMapView *mapView;
 @property (strong, nonatomic) CLLocationManager *locationManager ;
@@ -34,8 +35,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
-    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-    NSInteger myInt = [prefs integerForKey:@"Tipo"];
     
     self.markerForOrder = [[NSMutableDictionary alloc] initWithCapacity:100];
 
@@ -43,13 +42,7 @@
     self.locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters ;
     [self.locationManager startUpdatingLocation];
     
-    if (myInt == 0){
-        self.mapView.mapType = kGMSTypeNormal;
-    }else{
-        self.mapView.mapType = kGMSTypeHybrid;
-    }
-    BOOL trafego = [prefs boolForKey:@"Transito"];
-    self.mapView.trafficEnabled = trafego;
+    [self updateMapOptions];
     
     // Adiciona label de teclado ao toolbar que fica acima do teclado (não dá pra fazer isso via Storyboard :/)
     NSMutableArray *newAccesoryViewItems = [self.accessoryView.items mutableCopy];
@@ -73,6 +66,19 @@
                                                  name:UIKeyboardWillHideNotification
                                                object:nil];
 
+}
+
+- (void) updateMapOptions
+{
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    NSInteger myInt = [prefs integerForKey:@"Tipo"];
+    if (myInt == 0){
+        self.mapView.mapType = kGMSTypeNormal;
+    }else{
+        self.mapView.mapType = kGMSTypeHybrid;
+    }
+    BOOL trafego = [prefs boolForKey:@"Transito"];
+    self.mapView.trafficEnabled = trafego;
 }
 
 - (CLLocationManager *)locationManager
@@ -250,6 +256,20 @@
     
     CLLocation *location = [locations lastObject];
     self.mapView.camera = [GMSCameraPosition cameraWithTarget:location.coordinate zoom:11];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ( [segue.identifier isEqualToString:@"viewOptions"] ) {
+        OptionsViewController *optionsVC = segue.destinationViewController ;
+        optionsVC.delegate = self ;
+    }
+}
+
+- (void)doneOptionsView
+{
+    // Atualiza opções do mapa
+    [self updateMapOptions];
 }
 
 @end

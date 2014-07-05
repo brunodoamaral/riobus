@@ -14,50 +14,40 @@
 @property (strong, nonatomic) IBOutlet UISegmentedControl *tupo;
 @property (strong, nonatomic) IBOutlet UISwitch *traf;
 @property (strong, nonatomic) IBOutlet UIButton *fbbutton;
+@property (weak, nonatomic) IBOutlet UITextView *textView;
 
 @end
 
 @implementation OptionsViewController
-@synthesize buttonClose;
-@synthesize tupo;
-@synthesize traf;
-@synthesize fbbutton;
-
-/*
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
    NSInteger myInt = [prefs integerForKey:@"Tipo"];
-    if (myInt == nil){
-        tupo.selectedSegmentIndex = 0;
-    }
-    else if (myInt == 0){
-        tupo.selectedSegmentIndex = 0;
+    if (myInt == 0){
+        self.tupo.selectedSegmentIndex = 0;
     }else{
-        tupo.selectedSegmentIndex = 1;
+        self.tupo.selectedSegmentIndex = 1;
     }
     
         
     BOOL trafego = [prefs boolForKey:@"Transito"];
-    if (trafego == nil)
-        trafego = NO;
-    traf.on = trafego;
+    self.traf.on = trafego;
     
 
-    buttonClose.layer.cornerRadius = 10;
-    fbbutton.layer.cornerRadius = 10;
+    self.buttonClose.layer.cornerRadius = 10;
+    self.fbbutton.layer.cornerRadius = 10;
     // Do any additional setup after loading the view.
 }
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    [self.textView flashScrollIndicators];
+}
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -73,25 +63,27 @@
     }
 }
 
-
-- (IBAction)fechar:(id)sender {
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
     
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
     
-    if([tupo selectedSegmentIndex] == 0){
+    if([self.tupo selectedSegmentIndex] == 0){
       [prefs setInteger:0 forKey:@"Tipo"];
     }
-    else if([tupo selectedSegmentIndex] == 1){
+    else if([self.tupo selectedSegmentIndex] == 1){
       [prefs setInteger:1 forKey:@"Tipo"];
     }
     
-    [prefs setBool:traf.on forKey:@"Transito"];
+    [prefs setBool:self.traf.on forKey:@"Transito"];
     // – setBool:forKey:
     // – setFloat:forKey:
     // in your case
 
+    [[NSUserDefaults standardUserDefaults] synchronize];
     
-    [self dismissViewControllerAnimated:YES completion:NO];
+    [self.delegate doneOptionsView];
 }
-*/
+
 @end

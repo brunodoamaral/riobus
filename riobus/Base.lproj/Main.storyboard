@@ -264,6 +264,7 @@ Os dados são oferecidos publicamente pela Prefeitura do Rio de Janeiro, em parc
                     <navigationItem key="navigationItem" title="Opções" id="ca1-kb-5il"/>
                     <connections>
                         <outlet property="fbbutton" destination="REX-bd-9lh" id="Mvq-sP-TfV"/>
+                        <outlet property="textView" destination="7WG-WT-B0s" id="uss-Xa-etC"/>
                         <outlet property="traf" destination="NH2-9T-3Ol" id="PhK-Q9-nBo"/>
                         <outlet property="tupo" destination="Nwg-q2-kg6" id="E4k-DF-Os6"/>
                     </connections>
