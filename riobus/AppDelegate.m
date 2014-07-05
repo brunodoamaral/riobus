@@ -9,14 +9,20 @@
 #import "AppDelegate.h"
 #import "SDKDemoAPIKey.h"
 #import <GoogleMaps/GoogleMaps.h>
+#import <AFNetworking/AFNetworkActivityIndicatorManager.h>
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    // Configura chave do Google Maps
     [GMSServices provideAPIKey:kAPIKey];
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
+    
+//    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
+  
+    // Configura AFNetworking
+    [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
     return YES;
 }
 							

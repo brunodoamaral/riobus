@@ -13,7 +13,7 @@
 #import "BusDataStore.h"
 #import <Toast/Toast+UIView.h>
 
-@interface MapViewController () <CLLocationManagerDelegate>
+@interface MapViewController () <CLLocationManagerDelegate, GMSMapViewDelegate>
 
 @property (weak, nonatomic) IBOutlet GMSMapView *mapView;
 @property (strong, nonatomic) CLLocationManager *locationManager ;
@@ -22,6 +22,8 @@
 @property (strong, nonatomic) NSArray *busesData ;
 @property (weak, nonatomic) IBOutlet UITextField *searchInput;
 @property (strong, nonatomic) NSTimer *updateTimer ;
+@property (weak, nonatomic) IBOutlet UIToolbar *accessoryView;
+@property (weak, nonatomic) IBOutlet UIView *overlayMap;
 
 @end
 
@@ -49,8 +51,28 @@
     BOOL trafego = [prefs boolForKey:@"Transito"];
     self.mapView.trafficEnabled = trafego;
     
-//    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDefault;
-//    [UIApplication sharedApplication].statusBarHidden = NO;
+    // Adiciona label de teclado ao toolbar que fica acima do teclado (não dá pra fazer isso via Storyboard :/)
+    NSMutableArray *newAccesoryViewItems = [self.accessoryView.items mutableCopy];
+    
+    UILabel * lblTeclado = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 40)];
+    lblTeclado.text = @"Teclado:";
+    
+    UIBarButtonItem *labelItem = [[UIBarButtonItem alloc] initWithCustomView:lblTeclado];
+    [newAccesoryViewItems insertObject:labelItem atIndex:0];
+    [self.accessoryView setItems:newAccesoryViewItems animated:NO];
+    
+    self.searchInput.inputAccessoryView = self.accessoryView ;
+    
+    // Monitora teclado
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillShow:)
+                                                 name:UIKeyboardWillShowNotification
+                                               object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillHide:)
+                                                 name:UIKeyboardWillHideNotification
+                                               object:nil];
+
 }
 
 - (CLLocationManager *)locationManager
@@ -60,19 +82,88 @@
     return _locationManager ;
 }
 
+- (void) setOverlayMapVisible:(BOOL)visible withKeyboardInfo:(NSDictionary*)info
+{
+    // Obtém dados da animação
+    UIViewAnimationCurve animationCurve = [info[UIKeyboardAnimationCurveUserInfoKey] unsignedIntegerValue];
+    UIViewAnimationOptions animationOptions = UIViewAnimationOptionBeginFromCurrentState;
+    if (animationCurve == UIViewAnimationCurveEaseIn) {
+        animationOptions |= UIViewAnimationOptionCurveEaseIn;
+    }
+    else if (animationCurve == UIViewAnimationCurveEaseInOut) {
+        animationOptions |= UIViewAnimationOptionCurveEaseInOut;
+    }
+    else if (animationCurve == UIViewAnimationCurveEaseOut) {
+        animationOptions |= UIViewAnimationOptionCurveEaseOut;
+    }
+    else if (animationCurve == UIViewAnimationCurveLinear) {
+        animationOptions |= UIViewAnimationOptionCurveLinear;
+    }
+
+    NSTimeInterval animationDuration = [[info objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+
+    // Inicia a animação
+    if ( visible ) {
+        if ( self.overlayMap.hidden ) {
+            // Mostra o overlay
+            self.overlayMap.alpha = 0.0 ;
+            self.overlayMap.hidden = NO ;
+            
+            [UIView animateWithDuration:animationDuration delay:0 options:animationOptions animations:^{
+                self.overlayMap.alpha = 0.3 ;
+            } completion:nil];
+        }
+    } else {
+        if ( !self.overlayMap.hidden ) {
+            // Esconde o overlay
+            [UIView animateWithDuration:animationDuration delay:0 options:animationOptions animations:^{
+                self.overlayMap.alpha = 0.0 ;
+            } completion:^(BOOL finished) {
+                self.overlayMap.hidden = YES ;
+            }];
+        }
+    }
+}
+
+- (void)keyboardWillShow:(NSNotification *)notification {
+    NSDictionary *userInfo = [notification userInfo];
+    [self setOverlayMapVisible:YES withKeyboardInfo:userInfo];
+}
+
+- (void)keyboardWillHide:(NSNotification *)notification {
+    NSDictionary *userInfo = [notification userInfo];
+    [self setOverlayMapVisible:NO withKeyboardInfo:userInfo];
+}
+
+- (IBAction)onTapOverlay:(id)sender
+{
+    [self.searchInput resignFirstResponder];
+}
+
 -(void)aTime{
     
     if(![self.searchInput isFirstResponder])
         [self atualizar:self];
     
 }
+- (IBAction)changeKeyboardType:(UISegmentedControl *)sender {
+    if ( sender.selectedSegmentIndex == 0 ) {   // 0 == "0-9"
+        self.searchInput.keyboardType = UIKeyboardTypeNumberPad ;
+    } else {    // "A-Z"
+        self.searchInput.keyboardType = UIKeyboardTypeDefault ;
+    }
 
+    [self.searchInput reloadInputViews];
+}
 
 - (IBAction)searchClick:(id)sender {
     [self.searchInput resignFirstResponder];
-    [self atualizar:self];
     [self.markerForOrder removeAllObjects];
     [self.mapView clear];
+    
+    [self.view makeToastActivity];
+
+    [self atualizar:self];
 }
 
 - (void)atualizar:(id)sender {
@@ -85,6 +176,7 @@
     
     if ( self.searchInput.text.length > 0 ) {
         self.lastRequest = [[BusDataStore sharedInstance] loadBusDataForLineNumber:self.searchInput.text withCompletionHandler:^(NSArray *busesData, NSError *error) {
+            [self.view hideToastActivity];
             if ( error ) {
                 // Mostra Toast parecido com o Android
                 if ( error.code != NSURLErrorCancelled ) { // Erro ao cancelar um request

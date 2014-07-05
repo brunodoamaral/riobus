@@ -20,33 +20,50 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="settings.compassButton" value="YES"/>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="settings.myLocationButton" value="YES"/>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="myLocationEnabled" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <view hidden="YES" opaque="NO" alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rdR-J6-ubo" userLabel="Overlay">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="ilN-NR-9Rp" appends="YES" id="ECy-m2-YLQ"/>
+                                </connections>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Lfw-bq-mSB" secondAttribute="trailing" id="4Pz-St-5qA"/>
                             <constraint firstItem="Lfw-bq-mSB" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="BfG-tf-jBp"/>
+                            <constraint firstItem="rdR-J6-ubo" firstAttribute="bottom" secondItem="Lfw-bq-mSB" secondAttribute="bottom" id="Sd7-3X-8Ip"/>
+                            <constraint firstItem="rdR-J6-ubo" firstAttribute="top" secondItem="Lfw-bq-mSB" secondAttribute="top" id="dJO-nI-pky"/>
+                            <constraint firstItem="rdR-J6-ubo" firstAttribute="leading" secondItem="Lfw-bq-mSB" secondAttribute="leading" id="g4x-NL-P7Q"/>
                             <constraint firstItem="Lfw-bq-mSB" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="kGz-O1-zpg"/>
                             <constraint firstAttribute="bottom" secondItem="Lfw-bq-mSB" secondAttribute="bottom" id="q1H-50-wFW"/>
+                            <constraint firstItem="rdR-J6-ubo" firstAttribute="trailing" secondItem="Lfw-bq-mSB" secondAttribute="trailing" id="yUv-AG-qQD"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fyO-ox-e98">
                         <nil key="title"/>
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="icon-bus-toolbar" id="Vgx-bq-oQj">
+                        <barButtonItem key="leftBarButtonItem" image="icon-bus-toolbar.png" id="Vgx-bq-oQj">
                             <connections>
                                 <segue destination="5Av-an-b8f" kind="push" identifier="viewOptions" id="eBl-EJ-Hlf"/>
                             </connections>
                         </barButtonItem>
-                        <textField key="titleView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Número da linha" minimumFontSize="17" id="tLM-sk-JXc">
-                            <rect key="frame" x="85" y="7" width="151" height="30"/>
+                        <textField key="titleView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Número da linha" minimumFontSize="17" clearButtonMode="always" id="tLM-sk-JXc">
+                            <rect key="frame" x="90" y="7" width="141" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                            <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="search" enablesReturnKeyAutomatically="YES"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="search"/>
+                            <connections>
+                                <action selector="searchClick:" destination="vXZ-lx-hvc" eventType="editingDidEndOnExit" id="wix-dv-o0q"/>
+                            </connections>
                         </textField>
                         <barButtonItem key="rightBarButtonItem" title="Buscar" style="done" id="3fT-Jn-jXP">
                             <connections>
@@ -55,11 +72,38 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="accessoryView" destination="wWi-WK-oeK" id="DyX-uy-Fjm"/>
                         <outlet property="mapView" destination="Lfw-bq-mSB" id="IVe-WC-4Ar"/>
+                        <outlet property="overlayMap" destination="rdR-J6-ubo" id="ltn-e8-8G9"/>
                         <outlet property="searchInput" destination="tLM-sk-JXc" id="LJS-N4-aIW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="wWi-WK-oeK" userLabel="AccesoryToolbar">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <items>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="AX6-FV-xpM"/>
+                        <barButtonItem style="plain" id="S1K-MT-ubT">
+                            <segmentedControl key="customView" opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="3Kj-uM-Hy6">
+                                <rect key="frame" x="127" y="8" width="177" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="0-9"/>
+                                    <segment title="A-Z"/>
+                                </segments>
+                                <connections>
+                                    <action selector="changeKeyboardType:" destination="vXZ-lx-hvc" eventType="valueChanged" id="tFi-c8-jc9"/>
+                                </connections>
+                            </segmentedControl>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
+                <tapGestureRecognizer id="ilN-NR-9Rp">
+                    <connections>
+                        <action selector="onTapOverlay:" destination="vXZ-lx-hvc" id="adU-Xv-ZMn"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="69" y="-46"/>
         </scene>
@@ -111,7 +155,7 @@
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="REX-bd-9lh">
                                 <rect key="frame" x="20" y="420" width="280" height="40"/>
-                                <state key="normal" title="  Facebook RioBus" image="facebook">
+                                <state key="normal" title="  Facebook RioBus" image="facebook.png">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
@@ -230,8 +274,8 @@ Os dados são oferecidos publicamente pela Prefeitura do Rio de Janeiro, em parc
         </scene>
     </scenes>
     <resources>
-        <image name="facebook" width="40" height="40"/>
-        <image name="icon-bus-toolbar" width="20" height="20"/>
+        <image name="facebook.png" width="40" height="40"/>
+        <image name="icon-bus-toolbar.png" width="20" height="20"/>
         <image name="icon120.png" width="60" height="60"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
