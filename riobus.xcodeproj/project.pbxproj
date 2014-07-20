@@ -37,6 +37,18 @@
 		681A7FAB19684DC70006C335 /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 681A7FA919684DC70006C335 /* facebook.png */; };
 		681A7FAC19684DC70006C335 /* facebook@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 681A7FAA19684DC70006C335 /* facebook@2x.png */; };
 		681A7FAE196890AB0006C335 /* icon120.png in Resources */ = {isa = PBXBuildFile; fileRef = 681A7FAD196890AB0006C335 /* icon120.png */; };
+		68903D04197B5E8400DED4D7 /* signal-error@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 68903CFE197B5E8400DED4D7 /* signal-error@2x.png */; };
+		68903D05197B5E8400DED4D7 /* signal-1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 68903CFF197B5E8400DED4D7 /* signal-1@2x.png */; };
+		68903D06197B5E8400DED4D7 /* signal-2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 68903D00197B5E8400DED4D7 /* signal-2@2x.png */; };
+		68903D07197B5E8400DED4D7 /* signal-3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 68903D01197B5E8400DED4D7 /* signal-3@2x.png */; };
+		68903D08197B5E8400DED4D7 /* signal-4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 68903D02197B5E8400DED4D7 /* signal-4@2x.png */; };
+		68903D09197B5E8400DED4D7 /* signal-5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 68903D03197B5E8400DED4D7 /* signal-5@2x.png */; };
+		68903D10197B5F7900DED4D7 /* signal-error.png in Resources */ = {isa = PBXBuildFile; fileRef = 68903D0A197B5F7900DED4D7 /* signal-error.png */; };
+		68903D11197B5F7900DED4D7 /* signal-5.png in Resources */ = {isa = PBXBuildFile; fileRef = 68903D0B197B5F7900DED4D7 /* signal-5.png */; };
+		68903D12197B5F7900DED4D7 /* signal-4.png in Resources */ = {isa = PBXBuildFile; fileRef = 68903D0C197B5F7900DED4D7 /* signal-4.png */; };
+		68903D13197B5F7900DED4D7 /* signal-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 68903D0D197B5F7900DED4D7 /* signal-3.png */; };
+		68903D14197B5F7900DED4D7 /* signal-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 68903D0E197B5F7900DED4D7 /* signal-2.png */; };
+		68903D15197B5F7900DED4D7 /* signal-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 68903D0F197B5F7900DED4D7 /* signal-1.png */; };
 		F37CD79044D44A93BB494B9A /* libPods-riobus.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D9CA8F077F246CFBA653042 /* libPods-riobus.a */; };
 /* End PBXBuildFile section */
 
@@ -90,6 +102,18 @@
 		681A7FA919684DC70006C335 /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook.png; sourceTree = "<group>"; };
 		681A7FAA19684DC70006C335 /* facebook@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "facebook@2x.png"; sourceTree = "<group>"; };
 		681A7FAD196890AB0006C335 /* icon120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon120.png; sourceTree = "<group>"; };
+		68903CFE197B5E8400DED4D7 /* signal-error@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "signal-error@2x.png"; sourceTree = "<group>"; };
+		68903CFF197B5E8400DED4D7 /* signal-1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "signal-1@2x.png"; sourceTree = "<group>"; };
+		68903D00197B5E8400DED4D7 /* signal-2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "signal-2@2x.png"; sourceTree = "<group>"; };
+		68903D01197B5E8400DED4D7 /* signal-3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "signal-3@2x.png"; sourceTree = "<group>"; };
+		68903D02197B5E8400DED4D7 /* signal-4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "signal-4@2x.png"; sourceTree = "<group>"; };
+		68903D03197B5E8400DED4D7 /* signal-5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "signal-5@2x.png"; sourceTree = "<group>"; };
+		68903D0A197B5F7900DED4D7 /* signal-error.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "signal-error.png"; sourceTree = "<group>"; };
+		68903D0B197B5F7900DED4D7 /* signal-5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "signal-5.png"; sourceTree = "<group>"; };
+		68903D0C197B5F7900DED4D7 /* signal-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "signal-4.png"; sourceTree = "<group>"; };
+		68903D0D197B5F7900DED4D7 /* signal-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "signal-3.png"; sourceTree = "<group>"; };
+		68903D0E197B5F7900DED4D7 /* signal-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "signal-2.png"; sourceTree = "<group>"; };
+		68903D0F197B5F7900DED4D7 /* signal-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "signal-1.png"; sourceTree = "<group>"; };
 		8D9CA8F077F246CFBA653042 /* libPods-riobus.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-riobus.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		93573705E7B34D13ADE5C58F /* Pods-riobus.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-riobus.xcconfig"; path = "Pods/Pods-riobus.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -204,6 +228,18 @@
 		681A7F80196731410006C335 /* imagens */ = {
 			isa = PBXGroup;
 			children = (
+				68903D0A197B5F7900DED4D7 /* signal-error.png */,
+				68903D0B197B5F7900DED4D7 /* signal-5.png */,
+				68903D0C197B5F7900DED4D7 /* signal-4.png */,
+				68903D0D197B5F7900DED4D7 /* signal-3.png */,
+				68903D0E197B5F7900DED4D7 /* signal-2.png */,
+				68903D0F197B5F7900DED4D7 /* signal-1.png */,
+				68903CFE197B5E8400DED4D7 /* signal-error@2x.png */,
+				68903CFF197B5E8400DED4D7 /* signal-1@2x.png */,
+				68903D00197B5E8400DED4D7 /* signal-2@2x.png */,
+				68903D01197B5E8400DED4D7 /* signal-3@2x.png */,
+				68903D02197B5E8400DED4D7 /* signal-4@2x.png */,
+				68903D03197B5E8400DED4D7 /* signal-5@2x.png */,
 				681A7FA919684DC70006C335 /* facebook.png */,
 				681A7FAA19684DC70006C335 /* facebook@2x.png */,
 				681A7FA2196847830006C335 /* icon-bus-toolbar.png */,
@@ -309,11 +345,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68903D15197B5F7900DED4D7 /* signal-1.png in Resources */,
+				68903D10197B5F7900DED4D7 /* signal-error.png in Resources */,
+				68903D13197B5F7900DED4D7 /* signal-3.png in Resources */,
 				681A7FA4196847830006C335 /* icon-bus-toolbar.png in Resources */,
+				68903D07197B5E8400DED4D7 /* signal-3@2x.png in Resources */,
 				681A7F8D196731410006C335 /* bus-green.png in Resources */,
+				68903D09197B5E8400DED4D7 /* signal-5@2x.png in Resources */,
 				681A7FAC19684DC70006C335 /* facebook@2x.png in Resources */,
+				68903D12197B5F7900DED4D7 /* signal-4.png in Resources */,
 				681A7F5D196722540006C335 /* Images.xcassets in Resources */,
 				681A7FAB19684DC70006C335 /* facebook.png in Resources */,
+				68903D11197B5F7900DED4D7 /* signal-5.png in Resources */,
+				68903D04197B5E8400DED4D7 /* signal-error@2x.png in Resources */,
+				68903D14197B5F7900DED4D7 /* signal-2.png in Resources */,
 				681A7F90196731410006C335 /* bus-red.png in Resources */,
 				681A7F4F196722530006C335 /* InfoPlist.strings in Resources */,
 				681A7F92196731410006C335 /* bus-yellow.png in Resources */,
@@ -322,7 +367,10 @@
 				681A7F8E196731410006C335 /* bus-green@2x.png in Resources */,
 				681A7FAE196890AB0006C335 /* icon120.png in Resources */,
 				681A7FA5196847830006C335 /* icon-bus-toolbar@2x.png in Resources */,
+				68903D08197B5E8400DED4D7 /* signal-4@2x.png in Resources */,
 				681A7F58196722540006C335 /* Main.storyboard in Resources */,
+				68903D06197B5E8400DED4D7 /* signal-2@2x.png in Resources */,
+				68903D05197B5E8400DED4D7 /* signal-1@2x.png in Resources */,
 				681A7F93196731410006C335 /* bus-yellow@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

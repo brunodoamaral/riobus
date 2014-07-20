@@ -68,6 +68,10 @@
 
 }
 
+- (IBAction)displayServerStatus:(id)sender
+{
+}
+
 - (void) updateMapOptions
 {
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
@@ -152,6 +156,7 @@
         [self atualizar:self];
     
 }
+
 - (IBAction)changeKeyboardType:(UISegmentedControl *)sender {
     if ( sender.selectedSegmentIndex == 0 ) {   // 0 == "0-9"
         self.searchInput.keyboardType = UIKeyboardTypeNumberPad ;
@@ -221,6 +226,7 @@
         // Busca o marcador na "cache"
         GMSMarker *marca = self.markerForOrder[busData.order];
         if ( !marca ) {
+            // Senão aloca um novo
             marca = [[GMSMarker alloc] init];
             [marca setMap:self.mapView];
             [self.markerForOrder setValue:marca forKey:busData.order];
@@ -232,11 +238,11 @@
         
         UIImage *imagem;
         if (delayInformation > 10)
-            imagem = [UIImage imageNamed:@"bus-red.png"];
+            imagem = [UIImage imageNamed:@"bus-red"];
         else if (delayInformation > 5)
-            imagem = [UIImage imageNamed:@"bus-yellow.png"];
+            imagem = [UIImage imageNamed:@"bus-yellow"];
         else
-            imagem = [UIImage imageNamed:@"bus-green.png"];
+            imagem = [UIImage imageNamed:@"bus-green"];
         
         marca.icon = imagem;
     }];
@@ -256,6 +262,11 @@
     
     CLLocation *location = [locations lastObject];
     self.mapView.camera = [GMSCameraPosition cameraWithTarget:location.coordinate zoom:11];
+}
+
+- (IBAction)viewOptions:(id)sender
+{
+    [self performSegueWithIdentifier:@"viewOptions" sender:self];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender

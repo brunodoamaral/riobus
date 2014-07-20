@@ -57,7 +57,7 @@
                             </connections>
                         </barButtonItem>
                         <textField key="titleView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Número da linha" minimumFontSize="17" clearButtonMode="always" id="tLM-sk-JXc">
-                            <rect key="frame" x="90" y="7" width="141" height="30"/>
+                            <rect key="frame" x="71" y="7" width="179" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                             <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="search"/>
