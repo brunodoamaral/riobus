@@ -6,6 +6,7 @@ target "riobus" do
 	pod 'Google-Maps-iOS-SDK', '~> 1.8'
 	pod 'AFNetworking', '~> 2.3'
 	pod 'Toast', '~> 2.2'
+	pod 'CHCSVParser', '~> 2.1'
 
 end
 

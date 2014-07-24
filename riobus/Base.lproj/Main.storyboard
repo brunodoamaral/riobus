@@ -51,15 +51,15 @@
                     </view>
                     <navigationItem key="navigationItem" id="fyO-ox-e98">
                         <nil key="title"/>
-                        <barButtonItem key="leftBarButtonItem" image="icon-bus-toolbar.png" id="Vgx-bq-oQj">
+                        <barButtonItem key="leftBarButtonItem" image="signal-error.png" id="Vgx-bq-oQj">
                             <connections>
                                 <segue destination="5Av-an-b8f" kind="push" identifier="viewOptions" id="eBl-EJ-Hlf"/>
                             </connections>
                         </barButtonItem>
-                        <textField key="titleView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Número da linha" minimumFontSize="17" clearButtonMode="always" id="tLM-sk-JXc">
-                            <rect key="frame" x="71" y="7" width="179" height="30"/>
+                        <textField key="titleView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Número da linha" textAlignment="center" minimumFontSize="17" clearButtonMode="always" id="tLM-sk-JXc">
+                            <rect key="frame" x="83" y="7" width="154" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
                             <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="search"/>
                             <connections>
                                 <action selector="searchClick:" destination="vXZ-lx-hvc" eventType="editingDidEndOnExit" id="wix-dv-o0q"/>
@@ -105,7 +105,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="69" y="-46"/>
+            <point key="canvasLocation" x="13" y="-46"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="MsF-Ft-6bt">
@@ -276,8 +276,8 @@ Os dados são oferecidos publicamente pela Prefeitura do Rio de Janeiro, em parc
     </scenes>
     <resources>
         <image name="facebook.png" width="40" height="40"/>
-        <image name="icon-bus-toolbar.png" width="20" height="20"/>
         <image name="icon120.png" width="60" height="60"/>
+        <image name="signal-error.png" width="45" height="20"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

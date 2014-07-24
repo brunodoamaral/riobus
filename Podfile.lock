@@ -20,17 +20,20 @@ PODS:
   - AFNetworking/UIKit (2.3.1):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - CHCSVParser (2.1.0)
   - Google-Maps-iOS-SDK (1.8.1)
   - Toast (2.2)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.3)
+  - CHCSVParser (~> 2.1)
   - Google-Maps-iOS-SDK (~> 1.8)
   - Toast (~> 2.2)
 
 SPEC CHECKSUMS:
   AFNetworking: 6d7b76aa5d04c8c37daad3eef4b7e3f2a7620da3
-  Google-Maps-iOS-SDK: 542561448224b92d790483674b7313b13764e624
+  CHCSVParser: 1ebc9783114707e2b6f83b20fe0f246eb2fabae0
+  Google-Maps-iOS-SDK: 4fe35d952dbd1e4dacfcfa178e9cce2f06d67ecc
   Toast: dcf6e9f10369291f9c22feae1bed93c9ed3d84a2
 
 COCOAPODS: 0.33.1
